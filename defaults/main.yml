@@ -1,0 +1,4 @@
+---
+
+docker_daemon_template_path: templates/daemon.json.j2
+docker_os_family: "{{ ansible_os_family | lower }}" # debian or ubuntu

@@ -1,0 +1,14 @@
+---
+
+- name: Create /etc/docker directory
+  file:
+    path: /etc/docker
+    state: directory
+    
+
+- name: Copy /etc/docker/daemon.json
+  template:
+    src: "{{ docker_daemon_template_path }}"
+    dest: /etc/docker/daemon.json
+  notify:
+  - Restart docker

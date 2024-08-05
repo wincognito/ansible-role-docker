@@ -1,0 +1,15 @@
+---
+
+# Installs supplements for python working
+- name: install packages
+  apt:
+    pkg:
+    - python3-pip
+    update_cache: yes
+
+- name: Install docker Python modules
+  pip:
+    name: 
+    - docker
+    - jsondiff
+    - pyyaml
